@@ -11,7 +11,7 @@ Hello! I am a Ph.D. candidate in Economics at the University of Geneva, speciali
 
 Updates:
 ======
-- I am currently visiting the Department of Technology, Management and Economics at the Technical University of Denmark.
+- **Feb, 2024:** I am currently visiting the Department of Technology, Management and Economics at the Technical University of Denmark.
 
 
 I am a member of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
