@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Download <a href="https://git-pritamsaha.github.io/files/CV.pdf" target="_blank">CV</a>
+Download <a href="https://s-pritam.github.io/files/CV.pdf" target="_blank">CV</a>
 
 Education
 ======
