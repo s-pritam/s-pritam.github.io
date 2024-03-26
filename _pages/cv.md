@@ -15,7 +15,7 @@ Education
 ======
 ### Doctoral
 * Ph.D. Economics, University of Geneva (expected 2025)
-* Visiting Scholar, Danish Technical University (2024)
+* Visiting Scholar, Technical University of Denmark (2024)
 * Doctoral Program, Study Center Gerzensee (2021)
 
 ### Pre-Doctoral
