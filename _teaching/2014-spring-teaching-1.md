@@ -4,7 +4,7 @@ collection: teaching
 type: "Graduate course"
 permalink: /teaching/2014-spring-teaching-1
 venue: "University of Geneva, Geneva School of Economics and Management"
-date: Fall 2021
+date: 2021-09-20
 location: "Geneva, Switzerland"
 ---
 
