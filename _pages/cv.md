@@ -11,7 +11,7 @@ redirect_from:
 
 Download <a href="https://git-pritamsaha.github.io/files/CV.pdf" target="_blank">CV</a>
 
-## Education
+Education
 ======
 ### Doctoral
 * Ph.D. Economics, University of Geneva (expected 2025)
@@ -22,7 +22,7 @@ Download <a href="https://git-pritamsaha.github.io/files/CV.pdf" target="_blank"
 * M.A. Economics, Jadavpur University (2017)
 * B.A. Economics, Jadavpur University (2015)
 
-## Research
+Research
 ======
 **Fields of Interest**
 * _Primary_: Energy and Applied Microeconomics
@@ -42,14 +42,14 @@ Download <a href="https://git-pritamsaha.github.io/files/CV.pdf" target="_blank"
 * Research Assistant (Sep 2016 - Oct 2016)\
   Tripura University
 
-## Teaching
+Teaching
 ======
 * Development Economics (University of Geneva S412020, graduate, Fall 2023)
 * Introduction to Microeconomics (University of Geneva S102015, undergraduate, Fall 2021-23)
 * Microeconomics II (University of Geneva S210003, undergraduate, Spring 2022)
 * Sustainable Economic Development (University of Geneva S417070, graduate, Fall 2021)
 
-## Outreach & Professional Development
+Outreach & Professional Development
 ======
 * Refereeing:  
   * European Review of Agricultural Economics
@@ -60,61 +60,7 @@ Download <a href="https://git-pritamsaha.github.io/files/CV.pdf" target="_blank"
   * Mentor, GSEM Mentoring Program (2022-present)
   * Co-ordinator, Young Economist Students' Meet (2015)
 
-## Additional Information
+Additional Information
 ======
 * Languages: Bengali and Hindi (native), English (fluent), German (basic)
 * Programming: R, Python, Stata
-
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
