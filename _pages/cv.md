@@ -30,9 +30,7 @@ Research
 
 **Experience**
 * Research Assistant (Aug 2022 - present)\
-  Swiss National Science Foundation\
-  Project: “The oil and gas industry’s behavior in front of climate policy”\
-  Advisors: Julien Daubanes, Saraly Andrade de Sa, Salvatore Di Falco, Ivar Ekeland, Jean‑Charles Rochet
+  Swiss National Science Foundation
 * Data Analyst Intern (Feb 2022 - Aug 2022)\
   DGCI&S, Ministry of Commerce & Industry, Government of India
 * Research Assistant (Jul 2018 - Mar 2019)\
