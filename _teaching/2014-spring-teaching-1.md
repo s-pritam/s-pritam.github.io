@@ -2,7 +2,7 @@
 title: "Sustainable Economic Development"
 collection: teaching
 type: "Graduate course"
-permalink: /teaching/S417070
+permalink: /teaching/2014-spring-teaching-1
 venue: "University of Geneva, Geneva School of Economics and Management"
 date: Fall 2021
 location: "Geneva, Switzerland"
