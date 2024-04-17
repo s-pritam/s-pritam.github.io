@@ -9,6 +9,6 @@ author_profile: true
 
 Work in Progress
 ======
-- Effect of subsidies on investment in the Oil and Gas Sector: Evidence from Norway
-- The consequences of royalty relief programs in the oil industry (with Julien Daubanes, Saraly Andrade de Sá, Diego S. Cardoso & Erik Katovich)
+- The Effects of Investment Subsidies in the Oil Industry: Evidence from Norway
+- The Effects of Oil Royalty Changes: Evidence from the US Royalty Relief Program (with Diego S. Cardoso, Julien Daubanes & Erik Katovich)
 - Incomplete Environmental Regulations and Asset Misallocation (with Sanjana Ghosh & Léo Jean)
