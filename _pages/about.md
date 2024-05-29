@@ -16,5 +16,5 @@ Updates:
 
 
 I am a member of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
-- **Call for papers!** [3rd Rare Voices in Economics Conference](https://www.rarevoicesineconomics.com/conference-2024): **Call for papers!**
+- [3rd Rare Voices in Economics Conference](https://www.rarevoicesineconomics.com/conference-2024): **Call for papers!**
   The submission deadline is June 24, 2024. The conference will take place on September 9 & 10, 2024. For more details, check out the link above.
