@@ -11,7 +11,7 @@ Hello! I am a Ph.D. candidate in Economics at the University of Geneva, speciali
 
 Updates:
 ======
-- **Nov, 2024:** I will be presenting at the [PoNACEE](https://4euplus.eu/4EU-701.html) workshop in Geneva, and at the [SEREE](https://sebastien-houde.com/seree-2024/) workshop in Lausanne.
+- **Jan, 2025:** I will be presenting at the [EMEE](https://www.eaere.org/events/supported-events/emee-2025-16-th-international-workshop-on-empirical-methods-in-energy-economics/) workshop taking place at the World Bank, Washington DC.
 
 
 I am a member of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
