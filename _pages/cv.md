@@ -14,7 +14,7 @@ Download <a href="https://s-pritam.github.io/files/CV.pdf" target="_blank">CV</a
 Education
 ======
 ### Doctoral
-* Ph.D. Economics, University of Geneva (expected 2025)
+* Ph.D. Economics, University of Geneva (expected 2026)
 * Visiting Scholar, Technical University of Denmark (2024)
 * Doctoral Program, Study Center Gerzensee (2021)
 
@@ -26,11 +26,11 @@ Education
 Research
 ======
 **Fields of Interest**
-* _Primary_: Energy and Applied Microeconomics
-* _Secondary_: Development Economics, Political Economy, Industrial Organisation, Public Policy
+* _Primary_: Energy, Environment & Resource Economics
+* _Secondary_: Development Economics, Migration
 
 **Experience**
-* Research Assistant (Aug 2022 - present)\
+* Research Assistant (Aug 2022 - Jul 2024)\
   Swiss National Science Foundation
 * Data Analyst Intern (Feb 2022 - Aug 2022)\
   DGCI&S, Ministry of Commerce & Industry, Government of India
@@ -43,8 +43,8 @@ Research
 
 Teaching
 ======
-* Development Economics (University of Geneva S412020, graduate, Fall 2023)
-* Introduction to Microeconomics (University of Geneva S102015, undergraduate, Fall 2021-23)
+* Development Economics (University of Geneva S412020, graduate, Fall 2023-24)
+* Introduction to Microeconomics (University of Geneva S102015, undergraduate, Fall 2021-24)
 * Microeconomics II (University of Geneva S210003, undergraduate, Spring 2022)
 * Sustainable Economic Development (University of Geneva S417070, graduate, Fall 2021)
 
@@ -52,6 +52,7 @@ Outreach & Professional Development
 ======
 * Refereeing:  
   * European Review of Agricultural Economics
+  * Energy Economics
 * Articles:
   * The Wire (2017) [🔗](https://thewire.in/economy/unprecedented-job-losses-wage-decline-unorganised-sector-post-demonetisation)
 * Activities:
