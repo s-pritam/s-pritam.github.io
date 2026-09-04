@@ -38,7 +38,11 @@ const link = (href, icon, label, rel) =>
    so this markup is never re-rendered while the visitor moves around. */
 const chevron = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 15.25 12 8.75l6.5 6.5"/></svg>`;
 
-const PROFILE = `      <aside class="profile" id="profile">
+const profileFor = (url) => {
+  /* The About page ships the panel open; every other page ships it folded,
+     so a phone lands on the content with no post-load reflow. */
+  const collapsed = url !== '/';
+  return `      <aside class="profile" id="profile" data-collapsed="${collapsed}">
        <div class="profile__inner" id="profile-inner">
         <img class="profile__photo" src="/assets/img/portrait.jpg" width="560" height="759" alt="Pritam Saha" decoding="async">
         <p class="profile__name">Pritam Saha</p>
@@ -57,10 +61,11 @@ const PROFILE = `      <aside class="profile" id="profile">
           ${link('https://x.com/pritam_s_', 'x-twitter', 'X', 'me noopener')}
         </nav>
        </div>
-       <button class="profile__toggle" type="button" id="profile-toggle" aria-controls="profile-inner" aria-expanded="true" aria-label="Hide profile">
+       <button class="profile__toggle" type="button" id="profile-toggle" aria-controls="profile-inner" aria-expanded="${!collapsed}" aria-label="${collapsed ? 'Show profile' : 'Hide profile'}">
          ${chevron}
        </button>
       </aside>`;
+};
 
 function page({ url, title, desc, content, jsonld, noindex }) {
   const nav = NAV.map(([href, label]) =>
@@ -108,7 +113,7 @@ ${nav}
 </header>
 
     <div class="layout">
-${PROFILE}
+${profileFor(url)}
 
       <main class="content" id="main" tabindex="-1">
 ${content}
@@ -170,7 +175,7 @@ const jsonld = JSON.stringify({
 
 const home = `        <h1 class="page-h">About</h1>
         <div class="prose">
-          <p class="lede">I am a postdoctoral researcher at the <a href="https://genevaresearchlab.org/en/" class="lnk" rel="noopener">Geneva Research Lab for Digital Impact</a>, a joint initiative of the <a href="https://www.unige.ch/gsem/en/" class="lnk" rel="noopener">Geneva School of Economics and Management</a> at the University of Geneva and UNICEF&rsquo;s Digital Impact Division. My current research lies at the intersection of education, digital transformation, and development. I study how unequal access to digital infrastructure contributes to the digital divide and how investments in connectivity can expand educational opportunities.</p>
+          <p class="lede">I am a postdoctoral researcher at the <a href="https://genevaresearchlab.org/en/" class="lnk" rel="noopener">Geneva Research Lab for Digital Impact</a>, a joint initiative of the <a href="https://www.unige.ch/gsem/en/" class="lnk" rel="noopener">Geneva School of Economics and Management</a> at the University of Geneva and <a href="https://www.unicef.org/digitalimpact/" class="lnk" rel="noopener">UNICEF&rsquo;s Digital Impact Division</a>. My current research lies at the intersection of education, digital transformation, and development. I study how unequal access to digital infrastructure contributes to the digital divide and how investments in connectivity can expand educational opportunities.</p>
 
           <p>I received my Ph.D. in Economics from the University of Geneva in 2026, under the supervision of <a href="https://sites.google.com/site/giacomodegiorgi/" class="lnk" rel="noopener">Giacomo De Giorgi</a>. My doctoral research spanned energy, environmental and resource economics, as well as development economics. A central part of my work examined the oil and gas industry, focusing on how firms respond to climate policies and how these responses shape extraction, investment, ownership, and emissions, as well as the resulting misallocation of polluting resources. During my Ph.D., I was a visiting scholar at the <a href="https://www.man.dtu.dk/english" class="lnk" rel="noopener">Technical University of Denmark</a>.</p>
 
@@ -178,7 +183,6 @@ const home = `        <h1 class="page-h">About</h1>
         </div>`;
 
 const research = `        <h1 class="page-h">Research</h1>
-        <p class="lede">Energy, environment and resource economics, and development economics. Most of the work is empirical, and asks how firms and households respond when policy changes the incentives they face.</p>
 
         <section class="group">
           <h2 class="group__title">Publications</h2>

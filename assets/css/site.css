@@ -331,7 +331,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 }
 
 /* Single-column screens: the profile centres under the bar, photo first, and
-   can be folded away — by the chevron, or automatically once you scroll. */
+   folds away with the chevron. The folded state is scoped to .js because it
+   ships in the HTML: without scripting the chevron cannot work, so the panel
+   must stay open rather than hide the contact details for good. */
 .profile__toggle{display:none}
 
 @media (max-width:55.99rem){
@@ -344,8 +346,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     /* Deliberately NOT sticky. Pinning the folded strip under the header
        keeps the chevron reachable, but a sticky element whose height is
        animated stops the page scrolling altogether in Chrome. The panel
-       therefore stays in normal flow: scroll away to fold it, return to the
-       top to bring it back. */
+       therefore stays in normal flow, and folds only when pressed. */
   }
   .profile__inner{
     overflow:hidden;
@@ -353,8 +354,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     padding-bottom:1.5rem;
     transition:opacity .28s var(--ease), padding-bottom .38s var(--ease), visibility 0s;
   }
-  .profile[data-collapsed="true"]{grid-template-rows:0fr auto}
-  .profile[data-collapsed="true"] .profile__inner{
+  .js .profile[data-collapsed="true"]{grid-template-rows:0fr auto}
+  .js .profile[data-collapsed="true"] .profile__inner{
     opacity:0;
     /* Padding survives a 0fr row, so it has to go too or the panel leaves a
        gap behind after folding. */
@@ -391,11 +392,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
     transition:transform .38s var(--ease);
   }
-  .profile[data-collapsed="true"] .profile__toggle svg{transform:rotate(180deg)}
+  .js .profile[data-collapsed="true"] .profile__toggle svg{transform:rotate(180deg)}
 
   /* The layout gap would leave a hole above the content when folded. */
   .layout{transition:gap .38s var(--ease)}
-  .layout:has(.profile[data-collapsed="true"]){gap:1.5rem}
+  .js .layout:has(.profile[data-collapsed="true"]){gap:1.5rem}
 }
 
 /* --- Content ------------------------------------------------------------- */

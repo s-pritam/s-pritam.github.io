@@ -90,17 +90,13 @@
   }
 
   /* ------------------------------------------- collapsible profile ------ */
-  /* On phones the profile panel folds up into the header: by the chevron, or
-     on its own as soon as you scroll. A manual press wins until you return
-     to the top, so the panel does not fight the reader. */
+  /* On phones the profile panel folds up into the header, driven only by the
+     chevron. The About page ships it open, every other page ships it folded,
+     and scrolling never changes it either way: animating the panel's height
+     while the reader scrolls shifts the text under their finger, so scroll
+     position and panel state are kept completely independent. */
   var profile = document.getElementById('profile');
   var profileBtn = document.getElementById('profile-toggle');
-  var narrow = window.matchMedia ? window.matchMedia('(max-width: 55.99rem)') : null;
-  var manualOverride = false;
-  /* Set when a navigation parks the reader at the top. Landing at the top
-     because the page changed is not the same as scrolling back up to it, and
-     only the latter should unfold the panel. */
-  var arrivedAtTop = false;
 
   function setProfile(collapsed) {
     if (!profile || !profileBtn) return;
@@ -113,54 +109,17 @@
     return profile && profile.getAttribute('data-collapsed') === 'true';
   }
 
-  if (profile && profileBtn) {
-    setProfile(false);
-
+  if (profileBtn) {
     profileBtn.addEventListener('click', function () {
-      manualOverride = true;
       setProfile(!profileCollapsed());
     });
-
-    var pTicking = false;
-    var syncProfile = function () {
-      if (!narrow || !narrow.matches) { setProfile(false); return; }
-      var y = window.scrollY || window.pageYOffset || 0;
-      if (y > 8) {
-        /* Genuinely away from the top, so a later return to it counts. */
-        arrivedAtTop = false;
-        if (!manualOverride && y > 56) setProfile(true);
-      } else if (!arrivedAtTop) {
-        manualOverride = false;       /* scrolled back up: auto behaviour resumes */
-        setProfile(false);
-      }
-    };
-
-    window.addEventListener('scroll', function () {
-      if (pTicking) return;
-      pTicking = true;
-      window.requestAnimationFrame(function () { syncProfile(); pTicking = false; });
-    }, { passive: true });
-
-    if (narrow) {
-      var onNarrow = function () { manualOverride = false; syncProfile(); };
-      if (narrow.addEventListener) narrow.addEventListener('change', onNarrow);
-      else if (narrow.addListener) narrow.addListener(onNarrow);
-    }
   }
 
-  /* Called on every soft navigation. Switching page folds the panel away so
-     the reader lands on the content; the home page is the exception and always
-     shows it. Reopen with the chevron, or by scrolling back up to the top. */
+  /* Called on every soft navigation. The sidebar is never re-rendered, so the
+     panel is reset by hand to the incoming page's default: open on About,
+     folded away everywhere else. */
   function profileOnNavigate(pathname) {
-    if (!profile || !profileBtn) return;
-    manualOverride = false;   /* each page starts behaving automatically again */
-    if (pathname === '/') {
-      arrivedAtTop = false;
-      setProfile(false);
-    } else {
-      arrivedAtTop = true;    /* landing at the top is not the reader scrolling up */
-      setProfile(true);
-    }
+    setProfile(pathname !== '/');
   }
 
   /* --------------------------------------------------- soft navigation --- */
