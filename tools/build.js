@@ -10,7 +10,6 @@ const ROOT = path.join(__dirname, '..');
 
 const SITE = 'https://s-pritam.github.io';
 const GA = 'G-2LDELTXQ5G';
-const UPDATED = 'September 2026';
 
 const NAV = [
   ['/', 'Home'],
@@ -46,6 +45,7 @@ const profileFor = (url) => {
        <div class="profile__inner" id="profile-inner">
         <img class="profile__photo" src="/assets/img/portrait.jpg" width="560" height="759" alt="Pritam Saha" decoding="async">
         <p class="profile__name">Pritam Saha</p>
+        <p class="profile__title">Economist</p>
         <p class="profile__title">Postdoctoral Researcher</p>
         <p class="profile__org"><a href="https://genevaresearchlab.org/en/" rel="noopener">Geneva Research Lab for Digital Impact</a><br>University of Geneva</p>
         <p class="profile__contact">
@@ -123,7 +123,6 @@ ${content}
 <footer class="footer">
   <div class="footer__inner">
     <span>&copy; 2026 Pritam Saha</span>
-    <span>Last updated: ${UPDATED}</span>
   </div>
 </footer>
 
@@ -175,14 +174,17 @@ const jsonld = JSON.stringify({
 
 const home = `        <h1 class="page-h">About</h1>
         <div class="prose">
-          <p class="lede">I am a postdoctoral researcher at the <a href="https://genevaresearchlab.org/en/" class="lnk" rel="noopener">Geneva Research Lab for Digital Impact</a>, a joint initiative of the <a href="https://www.unige.ch/gsem/en/" class="lnk" rel="noopener">Geneva School of Economics and Management</a> at the University of Geneva and <a href="https://www.unicef.org/digitalimpact/" class="lnk" rel="noopener">UNICEF&rsquo;s Digital Impact Division</a>. My current research lies at the intersection of education, digital transformation, and development. I study how unequal access to digital infrastructure contributes to the digital divide and how investments in connectivity can expand educational opportunities.</p>
+          <p class="lede">I am a postdoctoral researcher at the <a href="https://genevaresearchlab.org/en/" class="lnk" rel="noopener">Geneva Research Lab for Digital Impact</a>, a joint initiative of the <a href="https://www.unige.ch/gsem/en/" class="lnk" rel="noopener">Geneva School of Economics and Management</a> at the University of Geneva and <a href="https://www.unicef.org/digitalimpact/" class="lnk" rel="noopener">UNICEF&rsquo;s Digital Impact Division</a>. My current research lies at the intersection of education, digital transformation, and development.</p>
 
-          <p>I received my Ph.D. in Economics from the University of Geneva in 2026, under the supervision of <a href="https://sites.google.com/site/giacomodegiorgi/" class="lnk" rel="noopener">Giacomo De Giorgi</a>. My doctoral research spanned energy, environmental and resource economics, as well as development economics. A central part of my work examined the oil and gas industry, focusing on how firms respond to climate policies and how these responses shape extraction, investment, ownership, and emissions, as well as the resulting misallocation of polluting resources. During my Ph.D., I was a visiting scholar at the <a href="https://www.man.dtu.dk/english" class="lnk" rel="noopener">Technical University of Denmark</a>.</p>
+          <p>I received my Ph.D. in Economics from the University of Geneva in 2026, under the supervision of <a href="https://sites.google.com/site/giacomodegiorgi/" class="lnk" rel="noopener">Giacomo De Giorgi</a>. My doctoral research spanned energy, environmental and resource economics, as well as development economics. I was also a visiting scholar at the <a href="https://www.man.dtu.dk/english" class="lnk" rel="noopener">Technical University of Denmark</a>.</p>
 
           <p>You can find <a href="/research/" class="lnk">more about my research</a> here.</p>
         </div>`;
 
 const research = `        <h1 class="page-h">Research</h1>
+        <div class="prose">
+          <p>My current research examines how unequal access to digital infrastructure contributes to the digital divide and how investments in connectivity can expand educational opportunities. My doctoral work focused on the environmental impacts of the upstream oil and gas industry, particularly how firms respond to climate policies and how these responses affect extraction, investment, ownership, emissions, and the allocation of polluting resources. I am also broadly interested in social networks, migration, and insurance.</p>
+        </div>
 
         <section class="group">
           <h2 class="group__title">Publications</h2>
@@ -247,7 +249,7 @@ const research = `        <h1 class="page-h">Research</h1>
 `;
 
 const teaching = `        <h1 class="page-h">Teaching</h1>
-        <p class="lede">Research and teaching assistant at the University of Geneva, 2021&ndash;2026, across the undergraduate and graduate programmes in economics.</p>
+        <p class="lede">Courses taught as a teaching assistant at the University of Geneva.</p>
 
         <section class="group">
           <h2 class="group__title">Courses</h2>
@@ -261,7 +263,6 @@ const teaching = `        <h1 class="page-h">Teaching</h1>
         </section>`;
 
 const cv = `        <h1 class="page-h">Curriculum vit&aelig;</h1>
-        <p class="lede">A PDF version is available to <a href="/files/CV.pdf" class="lnk">download</a>.</p>
 
         <div class="pdfbar">
           <a class="pdfbar__btn" href="/files/CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
@@ -275,7 +276,6 @@ const cv = `        <h1 class="page-h">Curriculum vit&aelig;</h1>
           </object>
         </div>
         <div class="pdfbox__small">
-          <p>Inline PDFs do not read well on a small screen, so open it directly instead.</p>
           <p><a class="btn" href="/files/CV.pdf">Open the CV (PDF)</a></p>
         </div>`;
 
@@ -288,7 +288,7 @@ const notfound = `        <h1 class="page-h">Page not found</h1>
 const pages = [
   { file: 'index.html', url: '/', title: 'Pritam Saha', desc: 'Pritam Saha is a postdoctoral researcher at the Geneva Research Lab for Digital Impact, University of Geneva, working on education, digital transformation and development, and on energy and environmental economics.', content: home, jsonld },
   { file: 'research/index.html', url: '/research/', title: 'Research — Pritam Saha', desc: 'Publications, projects, working papers and work in progress on the oil and gas industry, environmental commitments, migration and credit.', content: research },
-  { file: 'teaching/index.html', url: '/teaching/', title: 'Teaching — Pritam Saha', desc: 'Courses taught and coordinated at the University of Geneva, thesis examining, and mentoring.', content: teaching },
+  { file: 'teaching/index.html', url: '/teaching/', title: 'Teaching — Pritam Saha', desc: 'Economics courses taught as a teaching assistant at the University of Geneva.', content: teaching },
   { file: 'cv/index.html', url: '/cv/', title: 'CV — Pritam Saha', desc: 'Curriculum vitae of Pritam Saha: employment, education, research, projects, talks, teaching, service and skills.', content: cv },
   { file: '404.html', url: '/404.html', title: 'Page not found — Pritam Saha', desc: 'Page not found.', content: notfound, noindex: true },
 ];
